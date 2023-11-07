@@ -1,6 +1,10 @@
 view: trends_ocio {
   sql_table_name: `VENTA.trends_ocio` ;;
 
+  dimension: region {
+    type: string
+    sql: ${TABLE}.Region ;;
+  }
   dimension: canchas {
     type: string
     sql: ${TABLE}.Canchas ;;
@@ -16,10 +20,6 @@ view: trends_ocio {
   dimension: piscinas {
     type: string
     sql: ${TABLE}.Piscinas ;;
-  }
-  dimension: region {
-    type: string
-    sql: ${TABLE}.Region ;;
   }
   dimension: zonas_verdes {
     type: string

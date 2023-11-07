@@ -45,6 +45,7 @@ view: venta1 {
   dimension: departamento {
     type: string
     sql: ${TABLE}.Departamento ;;
+    drill_fields: [comprador_ciudad_residencia,comprador_zona]
   }
   dimension: doc_comprador {
     type: string

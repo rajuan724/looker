@@ -10,13 +10,21 @@ datagroup: colpatria_default_datagroup {
 
 persist_with: colpatria_default_datagroup
 
-explore: venta1 {}
+explore: venta1 {
+  join:trends_tiponegocio{
+    type: left_outer
+    sql_on: ${venta1.departamento}=${trends_tiponegocio.region} ;;
+    relationship: many_to_one
+  }
 
-explore: trends_tiponegocio {}
+  join:trends_ocio{
+    type: left_outer
+    sql_on: ${venta1.departamento}=${trends_ocio.region} ;;
+    relationship: many_to_one
+  }
+
+}
 
 explore: visitas {}
 
-explore: trends_ocio {}
-
 explore: venta {}
-
