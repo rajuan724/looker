@@ -6,23 +6,23 @@ view: trends_tiponegocio {
     sql: ${TABLE}.Region ;;
   }
   dimension: alojamiento_temporal {
-    type: string
+    type: number
     sql: ${TABLE}.alojamientoTemporal ;;
   }
   dimension: arriendos {
-    type: string
+    type: number
     sql: ${TABLE}.arriendos ;;
   }
   dimension: coliving {
-    type: string
+    type: number
     sql: ${TABLE}.Coliving ;;
   }
   dimension: habitaciones {
-    type: string
+    type: number
     sql: ${TABLE}.habitaciones ;;
   }
   dimension: renta_compra {
-    type: string
+    type: number
     sql: ${TABLE}.rentaCompra ;;
   }
   measure: count {
